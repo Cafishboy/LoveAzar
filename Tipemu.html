@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tell me your type</title>
+  <style>
+    body{
+      text-align: center;
+      background-color:violet;
+      color:yellow;
+    }
+    h1{
+      font-weight:bold;
+      font-family:Georgia;
+    }
+    div{
+      margin: 50px 0 100px 0;
+    }
+    h5{
+      text-align:left;
+      margin:5px 0 75px 0;
+    }
+    .ok{
+      margin:0 25px 0 25px;
+      padding: 15px;
+    }
+    .last{
+      margin:0 25px 0 25px;
+      padding: 15px;
+    }
+    .acc{
+      background-color:blue;
+      color:white;
+    }
+    .hell{
+      background-color:red;
+    }
+    .yes{
+      background-color:lime;
+    }
+    button{
+      font-weight: bold;
+    }
+    #mob{
+      color: white;
+      font-weight:normal;
+      font-family: Arial;
+      font-style:normal;
+    }
+    #rg{
+      width:200px;
+    }
+    p{
+      color: white;
+      font-weight: bold;
+      font-family: georgia;
+      font-style:italic;
+    }
+    #link{
+      background-color:yellow;
+      color:purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>GIMANA SIH TIPE COWOK IDEALMU?</h1>
+  <div>
+   <h5>• Ketik inisialnya!</h5>
+   <input type=text placeholder="inisial" maxlength="4" id="initial" oninput="this.value='Azar'">
+   <button onclick="pilihin()" class="acc">confirm</button>
+   <p id="a"></p>
+  </div>
+  <div>
+    <h5>• Tinggi badannya berapa?</h5>
+    <select>
+      <option disabled selected>- - -</option>
+      <option disabled>›200cm</option>
+      <option disabled>180cm-200cm</option>
+      <option>SAMA KEK AZAR</option>
+      <option disabled>170cm-180cm</option>
+      <option disabled>160cm-170cm</option>
+      <option disabled>‹150cm</option>
+    </select>
+    <button class="acc" onclick="pilihsel()">confirm</button>
+    <p id="bola"></p>
+    </div>
+  <div>
+    <h5>• Pilih Azar atau Jeffry Nichol?</h5>
+    <button onclick="olala()" class="ok yes">Azar lah</button>
+    <button onclick="pilihjeff()" id="aduhai" class="ok hell">Jeffwlee</button>
+    <p id="c"></p>
+  </div>
+  <div>
+     <h5>• Berapa suka anda dengan si A(zar)?</h5>
+   <input type="range" id="rg">
+    <p id="mob">100%--------------------------------100%</p>
+    <button onclick="pilihall()" class="acc">confirm</button>
+    <p id="d"></p>
+ </div>
+  <div>
+    <h5>• LAST QUESTION! Apakah kamu jujur dengan jawabanmu?</h5>
+    <button onclick="pilihjelas()" class="last yes" id="wojak">YA!!!!!!!</button>
+    <button onclick="pilihno()" class="last hell" id="worzo">nggak lah</button>
+    <p id=e></p>
+  </div>
+  <button id="link"><a href="https://www.instagram.com/azrullahilham?igsh=Nm1qZDVjcnE3OWM=">akun admin gantenk</a></button>
+  <script>
+    function pilihin(){
+      document.getElementById("a").innerHTML="LOH... inisial aja loh, tapi thanks";
+    }
+    function pilihsel(){
+      document.getElementById("bola").innerHTML="harus sama kek aku banget nih....?";
+    }
+    function olala(){
+      document.getElementById("c").innerHTML="ya jelas pilih aku lah";
+    }
+    function pilihjeff(){
+      document.getElementById("c").innerHTML="ehh ada error. Dimohon untuk memilih ulang";
+      const tombolBaru = document.createElement("button");
+      tombolBaru.innerHTML = "Azarlah";
+      document.getElementById("aduhai").replaceWith("");
+    }
+    function pilihall(){
+      document.getElementById("d").innerHTML="kamu suka banget ya sama aku?";
+    }
+    function pilihjelas(){
+      document.getElementById("e").innerHTML="uhhh jadi sayang banget emmmmmuahhhh";
+    }
+let state = 1;
+function pilihno() {
+  const btn = document.getElementById('worzo');
+  if (state === 1) {
+    btn.innerHTML = 'YA!!!!!!!';
+    btn.style.backgroundColor = 'lime';
+    state = 2;
+    btn.classlist.remove("worzo")
+    btn.classlist.add("wojak")
+  } else {
+    btn.innerHTML = 'YA!!!!!!!';
+    btn.style.backgroundColor = 'lime';
+    state = 1;
+    document.getElementById("e").innerHTML="uhhh jadi sayang banget emmmmmuahhhh"
+  }
+}
+  </script>
+</body>
+</html>
