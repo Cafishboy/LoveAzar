@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kalkulator abal-abal</title>
+  <style>
+    body{
+      text-align:center;
+      background-color:#FFaa00;
+      color:white;
+    }
+    .induk{
+      display:flex;
+      flex-direction: column;
+      height:150px;
+      justify-content: space-around;
+      margin:50px 20px 0 20px;
+      border:solid;
+      background-color:lightgrey;
+      border-color:grey;
+      border-radius:5px;
+    }
+    .item{
+      height:37px;
+      border:solid;
+      border-width: 3px;
+      border-radius: 5px;
+      border-color: darkgrey;
+      margin:0 30px 0 30px;
+    }
+    .bapak{
+      display:flex;
+      justify-content: center;
+      height:50px;
+      border:solid;
+      margin:20px;
+      background-color:lightgrey;
+      border-color:grey;
+      border-radius:5px;
+    }
+    .operasi{
+      width:50px;
+      margin:10px;
+      font-weight: bold;
+      font-size: 20px;
+      background-color:blue;
+      color:white;
+      border-radius: 5px;
+    }
+      .anak{
+      display:flex;
+      flex-direction: column;
+      height:100px;
+      justify-content: center;
+      margin:50px 50px 0 50px;
+      border:solid;
+      background-color:white;
+      border-color:grey;
+      border-radius:5px;
+      }
+    h5{
+      margin:0 20px 20px 20px;
+      color:black;
+    }
+    p{
+      overflow:hidden;
+      text-overflow: ellipsis;
+      margin:0 20px 0 20px;
+      color:black;
+    }
+    #link{
+      background-color:yellow;
+      margin:200px 0 0 0;
+    }
+    a{
+      color:purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>KALKULATOR</h1>
+  <div class="induk">
+    <input type="number" placeholder="nominal pertama" id="inputfirst" class="item">
+    <input type="number" placeholder="nominal kedua" id="inputsecond" class="item">
+  </div>
+  <div class="bapak">
+    <button id="jumlah" class="operasi" onclick="tambah()">+</button>
+    <button id="selisih" class="operasi" onclick="kurang()">-</button>
+    <button id="multi" class="operasi" onclick="kalikan()">x</button>
+    <button id="dividen" class="operasi" onclick="pembagi()">÷</button>
+  </div>
+  <div class="anak">
+  <h5>HASIL:</h5>
+  <p id="hasil">...</p>
+  </div>
+  <button id="link"><a href="https://www.instagram.com/cafish_boy?igsh=MWlhd3A5dWRzMHlnbg==">akun admin gantenk</a></button>
+  <script>
+    function tambah(){
+      const tulisCepat=document.getElementById("hasil");
+      let first=document.getElementById("inputfirst").value;
+      let second=document.getElementById("inputsecond").value;
+      let jumlah= Number(first) + Number(second);
+      tulisCepat.innerText=jumlah;
+    }
+    function kurang(){
+      const tulisCepat=document.getElementById("hasil");
+      let first=document.getElementById("inputfirst").value;
+      let second=document.getElementById("inputsecond").value;
+      let jumlah= Number(first) - Number(second);
+      tulisCepat.innerText=jumlah;
+    }
+    function kalikan(){
+      const tulisCepat=document.getElementById("hasil");
+      let first=document.getElementById("inputfirst").value;
+      let second=document.getElementById("inputsecond").value;
+      let jumlah= Number(first) * Number(second);
+      tulisCepat.innerText=jumlah;
+    }
+    function pembagi(){
+      const tulisCepat=document.getElementById("hasil");
+      let first=document.getElementById("inputfirst").value;
+      let second=document.getElementById("inputsecond").value;
+      let jumlah= Number(first) / Number(second);
+      tulisCepat.innerText=jumlah;
+    }
+  </script>
+</body>
+</html>
